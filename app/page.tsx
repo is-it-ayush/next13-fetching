@@ -2,7 +2,9 @@ import { Benchmark } from "../components/benchmark";
 
 export default async function Home() {
   // SSR Fetching
-  const res = await fetch("https://jsonplaceholder.typicode.com/todos/1");
+  const res = await fetch("https://jsonplaceholder.typicode.com/todos/1", {
+    cache: "no-store",
+  });
   const data = await res.json();
 
   return (
