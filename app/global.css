@@ -1,5 +1,5 @@
-:root {
-    --color-primary: #0070f3;
-    --color-secondary: #ff0070;
+main {
+    background-color: black;
+    color: white;
 }
 

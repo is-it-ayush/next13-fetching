@@ -13,11 +13,21 @@ export const Benchmark: React.FC<{ children: string }> = ({ children }) => {
   const lastTime = getLastTime(children);
   return (
     <div>
-      <div>
-        The page loaded at: <h1 id="givemetime">{lastTime ?? "dont know!"}</h1>
+      <div
+        style={{
+          fontWeight: "bold",
+          display: "flex",
+          flexDirection: "row",
+          alignItems: "center",
+          placeItems: "center",
+          columnGap: "10px",
+        }}
+      >
+        Request To Render Time:{" "}
+        <h4 id="givemetime">{lastTime ?? "dont know!"}</h4> ms
       </div>
       <script>
-        {`  
+        {`
                 const currentTime = new Date(); // round trip time
                 const fullTime = currentTime - window.performance.timing.requestStart;
                 console.log(\`It took ${children}\`, fullTime);

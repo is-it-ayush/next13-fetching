@@ -8,7 +8,14 @@ export default function RootLayout({
       <head>
         <title>Next.js Playground</title>
       </head>
-      <body>{children}</body>
+      <body
+        style={{
+          backgroundColor: "black",
+          color: "white",
+        }}
+      >
+        {children}
+      </body>
     </html>
   );
 }
