@@ -1,12 +1,9 @@
 import { Benchmark } from "../components/benchmark";
 
-const revalidate = 10;
-
 export default async function Home() {
   // SSR Fetching
   const res = await fetch("https://jsonplaceholder.typicode.com/todos/1");
   const data = await res.json();
-  console.log(`data`, data);
 
   return (
     <div className="">
